@@ -1,5 +1,6 @@
 extends Node2D
 
+
 var money = 50
 var inventory = []
 
