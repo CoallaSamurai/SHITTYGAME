@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ui_table_bg.png-39a061613d139ef805ad09a70d4a33ff.stex"
+path="res://.import/ill_wart_ghost.png-0b530fe4e9f67b2a1949636f694d4570.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/ui/ui_table_bg.png"
-dest_files=[ "res://.import/ui_table_bg.png-39a061613d139ef805ad09a70d4a33ff.stex" ]
+source_file="res://textures/characters/ill_wart_ghost.png"
+dest_files=[ "res://.import/ill_wart_ghost.png-0b530fe4e9f67b2a1949636f694d4570.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
