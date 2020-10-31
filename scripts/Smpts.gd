@@ -14,18 +14,24 @@ var vamp = Smpt
 
 
 func generate():
-	return [
-		candy.new("candy overdose", ["goblin sagebrush"], [], true),
-		pumpkin.new("pumpkinhead syndrome", ["beauty gel", "tears of beuty"], 
-		[], true),
-		slug.new("slug nose rheum", ["firefly flower", "gunpowder"], 
-		["amanita mix"], true),
-		psycho.new("halloween psychosis", ["goblin sagebrush", "amanita mix"],
-		["tears of beauty"], false),
-		warts.new("witch warts", ["beauty gel", "tears of beuty"],
-		["firefly flower"], true),
-		fcom.new("franyk", ["goblin sagebrush", "amanita mix"],
-		[], false),
-		vamp.new("vampd", ["firefly flower", "gunpowder"], 
+	candy.new("candy overdose", ["goblin sagebrush"], [], true)
+	pumpkin.new("pumpkinhead syndrome", ["beauty gel", "tears of beuty"], 
+		[], true)
+	slug.new("slug nose rheum", ["firefly flower", "gunpowder"], 
+		["amanita mix"], true)
+	psycho.new("halloween psychosis", ["goblin sagebrush", "amanita mix"],
+		["tears of beauty"], false)
+	warts.new("witch warts", ["beauty gel", "tears of beuty"],
+		["firefly flower"], true)
+	fcom.new("franyk", ["goblin sagebrush", "amanita mix"],
 		[], false)
-	]
+	vamp.new("vampd", ["firefly flower", "gunpowder"], 
+		[], false)
+	
+	return [candy,
+		pumpkin,
+		slug,
+		psycho,
+		warts,
+		fcom,
+		vamp]
