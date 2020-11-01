@@ -36,7 +36,9 @@ func _process(delta):
 		if pot_ready == false:
 			for cure in recipe:
 				for ill in $current_client.illness:
-					if cure in ill.cures:
+					if cure in ill.anticures:
+						print("SMERT PO PRICHINE PIDORAS")
+					elif cure in ill.cures:
 						points += 1
 			pot_ready = true
 		if points > 0:
