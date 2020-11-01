@@ -37,7 +37,7 @@ func _process(delta):
 					if cure in ill.cures:
 						points += 1
 
-		else:	
+		else:
 			if points > 0:
 				if points > 3:
 					points = 3
