@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 
-
+var cured = false
 var races = ["wolf_", "ghost_", "kopgob_"]
 var race
 var socalling = ""

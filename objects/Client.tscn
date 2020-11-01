@@ -1,12 +1,9 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://scripts/Client.gd" type="Script" id=1]
-[ext_resource path="res://textures/characters/wolf/char_warewolf.png" type="Texture" id=2]
-[ext_resource path="res://textures/characters/kobgob/char_kopgob.png" type="Texture" id=3]
 [ext_resource path="res://textures/characters/kobgob/char_kopgob_close.png" type="Texture" id=4]
 [ext_resource path="res://textures/characters/wolf/char_warewolf_close.png" type="Texture" id=5]
 [ext_resource path="res://textures/characters/ghost/char_ghost_close.png" type="Texture" id=6]
-[ext_resource path="res://textures/characters/ghost/char_ghost.png" type="Texture" id=7]
 [ext_resource path="res://textures/characters/ghost/ill_sopl_1_ghost.png" type="Texture" id=8]
 [ext_resource path="res://textures/characters/kobgob/ill_sopl_1_kopgob.png" type="Texture" id=9]
 [ext_resource path="res://textures/characters/wolf/ill_sopl_1_wolf.png" type="Texture" id=10]
@@ -22,17 +19,17 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "kopgob_",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "wolf_",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "ghost_",
 "speed": 0.0
