@@ -1,6 +1,5 @@
-extends Node2D
+extends Control
 
-var button = Button.new()
 
 
 # Declare member variables here. Examples:
@@ -10,7 +9,7 @@ var button = Button.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	print(get_children())
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

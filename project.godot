@@ -13,15 +13,9 @@ _global_script_classes=[ {
 "class": "Smpt",
 "language": "GDScript",
 "path": "res://scripts/Smpt.gd"
-}, {
-"base": "Resource",
-"class": "Smpts",
-"language": "GDScript",
-"path": "res://scripts/Smpts.gd"
 } ]
 _global_script_class_icons={
-"Smpt": "",
-"Smpts": ""
+"Smpt": ""
 }
 
 [application]
@@ -29,6 +23,7 @@ _global_script_class_icons={
 config/name="Hackathone"
 config/icon="res://icon.png"
 
+<<<<<<< HEAD
 [autoload]
 
 Client="*res://objects/Client.tscn"
@@ -42,6 +37,8 @@ window/size/fullscreen=true
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
+=======
+>>>>>>> dc2f7ca3e98d121a98a39576600853beef11c096
 [rendering]
 
 environment/default_environment="res://default_env.tres"
