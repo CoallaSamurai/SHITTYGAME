@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ui_book_p4.png-0bb56aefae74fd47ceb35f3f5ab4f0d4.stex"
+path="res://.import/ui_arrow_h_l.png-0b5557377db286a75443351536eae607.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/ui/book/ui_book_p4.png"
-dest_files=[ "res://.import/ui_book_p4.png-0bb56aefae74fd47ceb35f3f5ab4f0d4.stex" ]
+source_file="res://textures/ui/book/ui_arrow_h_l.png"
+dest_files=[ "res://.import/ui_arrow_h_l.png-0b5557377db286a75443351536eae607.stex" ]
 
 [params]
 

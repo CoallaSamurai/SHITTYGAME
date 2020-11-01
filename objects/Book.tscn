@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://textures/ui/book/ui_book_p1.png" type="Texture" id=1]
-[ext_resource path="res://textures/ui/book/ui_qeust_check.png" type="Texture" id=2]
+[ext_resource path="res://textures/ui/book/ui_arrow_p_l.png" type="Texture" id=2]
 [ext_resource path="res://objects/Book.gd" type="Script" id=3]
-[ext_resource path="res://textures/ui/cauldron/ui_cauld_1.png" type="Texture" id=4]
+[ext_resource path="res://textures/ui/book/ui_arrow_l.png" type="Texture" id=4]
+[ext_resource path="res://textures/ui/book/ui_arrow.png" type="Texture" id=5]
+[ext_resource path="res://textures/ui/book/ui_arrow_disab.png" type="Texture" id=6]
+[ext_resource path="res://textures/ui/book/ui_arrow_h.png" type="Texture" id=7]
+[ext_resource path="res://textures/ui/book/ui_arrow_p.png" type="Texture" id=8]
 
 [node name="Book" type="Control"]
 anchor_right = 1.0
@@ -18,23 +22,27 @@ texture = ExtResource( 1 )
 centered = false
 
 [node name="left" type="TextureButton" parent="."]
-margin_left = 25.9675
-margin_top = 149.643
-margin_right = 40.9675
-margin_bottom = 166.643
-texture_normal = ExtResource( 2 )
-texture_disabled = ExtResource( 4 )
+margin_left = 21.6982
+margin_top = 147.593
+margin_right = 36.6982
+margin_bottom = 164.593
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 2 )
+texture_disabled = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="right" type="TextureButton" parent="."]
-margin_left = 202.899
-margin_top = 146.562
-margin_right = 217.899
-margin_bottom = 163.562
-texture_normal = ExtResource( 2 )
-texture_disabled = ExtResource( 4 )
+margin_left = 201.977
+margin_top = 148.406
+margin_right = 216.977
+margin_bottom = 165.406
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 7 )
+texture_disabled = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

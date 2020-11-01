@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ui_book_p4.png-0bb56aefae74fd47ceb35f3f5ab4f0d4.stex"
+path="res://.import/ui_arrow_disab.png-d6f28d53f41f90b57506043213a05da9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/ui/book/ui_book_p4.png"
-dest_files=[ "res://.import/ui_book_p4.png-0bb56aefae74fd47ceb35f3f5ab4f0d4.stex" ]
+source_file="res://textures/ui/book/ui_arrow_disab.png"
+dest_files=[ "res://.import/ui_arrow_disab.png-d6f28d53f41f90b57506043213a05da9.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

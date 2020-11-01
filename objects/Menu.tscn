@@ -100,7 +100,7 @@ text = " Quit"
 align = 0
 
 [node name="Particles2D" type="Particles2D" parent="."]
-position = Vector2( 116.03, 150.65 )
+position = Vector2( 97.5447, 266.843 )
 scale = Vector2( 1, 0.993374 )
 amount = 18
 lifetime = 8.0
@@ -109,8 +109,7 @@ process_material = SubResource( 1 )
 texture = ExtResource( 4 )
 
 [node name="Particles2D2" type="Particles2D" parent="."]
-visible = false
-position = Vector2( 116.03, 150.65 )
+position = Vector2( 137.156, 264.643 )
 amount = 22
 lifetime = 8.0
 randomness = 0.11
