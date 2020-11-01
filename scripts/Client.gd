@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 
-var poss: Smpts
+
 var names = ["Kaka", "Sraka", "Ochlo", "Yebun", "Pukich"]
 var socalling = ""
 var illness = []
@@ -35,9 +35,9 @@ func give_smpt():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print(get_parent())
 	randomize()
 	give_smpt()
-	print("dupa")
 	print(illness[0].name)
 
 

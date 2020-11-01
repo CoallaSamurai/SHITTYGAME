@@ -13,25 +13,15 @@ _global_script_classes=[ {
 "class": "Smpt",
 "language": "GDScript",
 "path": "res://scripts/Smpt.gd"
-}, {
-"base": "Resource",
-"class": "Smpts",
-"language": "GDScript",
-"path": "res://scripts/Smpts.gd"
 } ]
 _global_script_class_icons={
-"Smpt": "",
-"Smpts": ""
+"Smpt": ""
 }
 
 [application]
 
 config/name="Hackathone"
 config/icon="res://icon.png"
-
-[autoload]
-
-Client="*res://objects/Client.tscn"
 
 [rendering]
 
