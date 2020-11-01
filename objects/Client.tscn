@@ -147,6 +147,3 @@ z_index = 1
 frames = SubResource( 4 )
 animation = "kopgob_"
 speed_scale = 0.0
-
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
