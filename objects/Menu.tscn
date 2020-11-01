@@ -1,0 +1,167 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://textures/ui/menu_bg.png" type="Texture" id=1]
+[ext_resource path="res://menu_test.gd" type="Script" id=2]
+[ext_resource path="res://textures/particles/p2.png" type="Texture" id=3]
+[ext_resource path="res://textures/particles/p1.png" type="Texture" id=4]
+[ext_resource path="res://font/theme_main.tres" type="Theme" id=5]
+[ext_resource path="res://Sprites/UI/anim2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/UI/anim1.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/UI/anim3.png" type="Texture" id=8]
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 2
+emission_box_extents = Vector3( 107.11, 0.1, 1 )
+flag_disable_z = true
+gravity = Vector3( 0, -5, 0 )
+angular_velocity = 9.86
+angular_velocity_random = 0.2
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+radial_accel = 3.0
+radial_accel_random = 1.0
+angle = -364.9
+angle_random = 1.0
+scale = 2.0
+scale_random = 1.0
+color = Color( 0.192157, 0.505882, 1, 1 )
+hue_variation = -0.05
+hue_variation_random = 0.27
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "Idle_bg",
+"speed": 0.7
+} ]
+
+[sub_resource type="Animation" id=3]
+resource_name = "fade_out_menu"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 4.5948 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 22.0
+margin_top = 61.0
+margin_right = 109.0
+margin_bottom = 129.0
+rect_scale = Vector2( 1.08251, 1.23978 )
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Game bla" type="Button" parent="VBoxContainer"]
+margin_right = 107.0
+margin_bottom = 14.0
+theme = ExtResource( 5 )
+text = " Start Game"
+align = 0
+
+[node name="Game ne" type="Button" parent="VBoxContainer"]
+margin_top = 18.0
+margin_right = 107.0
+margin_bottom = 32.0
+text = " How to play"
+align = 0
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+margin_top = 36.0
+margin_right = 107.0
+margin_bottom = 50.0
+text = " Quit"
+align = 0
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 116.03, 150.65 )
+scale = Vector2( 1, 0.993374 )
+amount = 18
+lifetime = 8.0
+randomness = 0.11
+process_material = SubResource( 1 )
+texture = ExtResource( 4 )
+
+[node name="Particles2D2" type="Particles2D" parent="."]
+visible = false
+position = Vector2( 116.03, 150.65 )
+amount = 22
+lifetime = 8.0
+randomness = 0.11
+process_material = SubResource( 1 )
+texture = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 125, 0 )
+frames = SubResource( 2 )
+animation = "Idle_bg"
+frame = 2
+playing = true
+centered = false
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+margin_right = 257.0
+margin_bottom = 145.0
+rect_scale = Vector2( 1.79711, 1.81052 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="fade_out" type="AnimationPlayer" parent="ColorRect2"]
+anims/fade_out_menu = SubResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_left = 1.0
+margin_right = 258.0
+margin_bottom = 146.0
+rect_scale = Vector2( 1.78762, 1.8082 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+anims/fade_in = SubResource( 4 )
+[connection signal="pressed" from="VBoxContainer/Game bla" to="." method="_on_Game_bla_pressed"]
+[connection signal="pressed" from="VBoxContainer/Game ne" to="." method="_on_Game_ne_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="animation_finished" from="ColorRect2/fade_out" to="." method="_on_fade_out_animation_finished"]
+[connection signal="animation_finished" from="ColorRect/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
