@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ill_pump_1_kopgob.png-0879099b0ff3df8cd45d81684b69837d.stex"
+path="res://.import/ui_cross_h.png-cac0cb162c409c223f500796a6146e01.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/characters/kobgob/ill_pump_1_kopgob.png"
-dest_files=[ "res://.import/ill_pump_1_kopgob.png-0879099b0ff3df8cd45d81684b69837d.stex" ]
+source_file="res://textures/ui/book/ui_cross_h.png"
+dest_files=[ "res://.import/ui_cross_h.png-cac0cb162c409c223f500796a6146e01.stex" ]
 
 [params]
 

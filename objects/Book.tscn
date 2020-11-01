@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://textures/ui/book/ui_book_p1.png" type="Texture" id=1]
 [ext_resource path="res://textures/ui/book/ui_arrow_p_l.png" type="Texture" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://textures/ui/book/ui_arrow_disab.png" type="Texture" id=6]
 [ext_resource path="res://textures/ui/book/ui_arrow_h.png" type="Texture" id=7]
 [ext_resource path="res://textures/ui/book/ui_arrow_p.png" type="Texture" id=8]
+[ext_resource path="res://textures/ui/book/ui_cross_h.png" type="Texture" id=9]
+[ext_resource path="res://textures/ui/book/ui_cross_p.png" type="Texture" id=10]
+[ext_resource path="res://textures/ui/book/ui_cross.png" type="Texture" id=11]
 
 [node name="Book" type="Control"]
 anchor_right = 1.0
@@ -18,14 +21,16 @@ __meta__ = {
 }
 
 [node name="Pages" type="Sprite" parent="."]
+position = Vector2( 0.773804, 0 )
+scale = Vector2( 1.0027, 1.00392 )
 texture = ExtResource( 1 )
 centered = false
 
 [node name="left" type="TextureButton" parent="."]
-margin_left = 21.6982
-margin_top = 147.593
-margin_right = 36.6982
-margin_bottom = 164.593
+margin_left = 24.0
+margin_top = 152.0
+margin_right = 39.0
+margin_bottom = 169.0
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 2 )
 texture_hover = ExtResource( 2 )
@@ -35,10 +40,10 @@ __meta__ = {
 }
 
 [node name="right" type="TextureButton" parent="."]
-margin_left = 201.977
-margin_top = 148.406
-margin_right = 216.977
-margin_bottom = 165.406
+margin_left = 200.0
+margin_top = 152.0
+margin_right = 215.0
+margin_bottom = 169.0
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 8 )
 texture_hover = ExtResource( 7 )
@@ -46,5 +51,19 @@ texture_disabled = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 40.0
+margin_top = 152.0
+margin_right = 59.0
+margin_bottom = 169.0
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 9 )
+texture_disabled = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

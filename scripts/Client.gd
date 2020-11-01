@@ -12,7 +12,7 @@ var slug = Smpt.new("sopl", ["firefly flower", "gunpowder"], ["amanita mix"], tr
 var psycho = Smpt.new("hall", ["goblin sagebrush", "amanita mix"], ["tears of beauty"], false)
 var warts = Smpt.new("wart", ["beauty gel", "tears of beuty"], ["firefly flower"], true)
 var fcom = Smpt.new("franyk", ["goblin sagebrush", "amanita mix"], [], false)
-#var undead = Smpt
+var is_idle = false
 var vamp = Smpt.new("vampd", ["firefly flower", "gunpowder"], [], false)
 
 
@@ -61,9 +61,15 @@ func _ready():
 			$Zomb.visible = true
 		if ill.name == "pump":
 			$Pump.visible = true
+	$move.play("move_in")
 
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if is_idle:
+		$move.play("idle")
+
+
+func _on_move_animation_finished(anim_name):
+	is_idle=true

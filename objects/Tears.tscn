@@ -6,8 +6,9 @@
 [ext_resource path="res://objects/Tears.gd" type="Script" id=4]
 
 [node name="Tears" type="TextureButton"]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 6.0
+margin_bottom = 16.0
+toggle_mode = true
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 1 )

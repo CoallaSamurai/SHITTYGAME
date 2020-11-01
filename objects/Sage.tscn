@@ -8,6 +8,7 @@
 [node name="Sage" type="TextureButton"]
 margin_right = 40.0
 margin_bottom = 40.0
+toggle_mode = true
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 1 )
 texture_hover = ExtResource( 3 )

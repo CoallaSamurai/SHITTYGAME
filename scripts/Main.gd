@@ -21,12 +21,24 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if len(recipe)>0:
+		$Cauld_button/giga.visible=true
+	else:
+		$Cauld_button/giga.visible=false
+	
 	if is_client == false:
 		points = 0
 		current_client = CLIENT.instance()
 		current_client.set_name("current_client")
 		add_child(current_client)
 		$current_client.position += Vector2(300, 200)
+		for i in $current_client.illness:
+			if "vampd" == i.name:
+				$Control/ch3.visible = true
+			if "hall" == i.name:
+				$Control/ch1.visible = true
+			if "franyk" == i.name:
+				$Control/ch2.visible = true
 		is_client = true
 		print(recipe)
 	else:
@@ -48,6 +60,15 @@ func _process(delta):
 				$current_client.queue_free()
 				is_client = false
 				pot_ready = false
+				$Control/ch3.visible = false
+				$Control/ch1.visible = false
+				$Control/ch2.visible = false
+				recipe = []
 			else:
 				get_tree().change_scene("res://objects/Death.tscn")
+		
 	
+
+
+func _on_Quest_smol_button_down():
+	$Control.visible=true

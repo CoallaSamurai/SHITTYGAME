@@ -1,12 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://textures/ui/book/ui_qeust_check.png" type="Texture" id=1]
 [ext_resource path="res://textures/ui/book/ui_arrow_disab.png" type="Texture" id=2]
 [ext_resource path="res://textures/ui/book/ui_qeust.png" type="Texture" id=3]
+[ext_resource path="res://textures/ui/book/ui_cross_h.png" type="Texture" id=4]
+[ext_resource path="res://textures/ui/book/ui_cross_p.png" type="Texture" id=5]
+[ext_resource path="res://textures/ui/book/ui_cross.png" type="Texture" id=6]
+[ext_resource path="res://objects/Question.gd" type="Script" id=7]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -16,6 +21,7 @@ texture = ExtResource( 3 )
 centered = false
 
 [node name="ch1" type="TextureButton" parent="."]
+visible = false
 margin_left = 222.329
 margin_top = 71.6868
 margin_right = 236.329
@@ -27,6 +33,7 @@ __meta__ = {
 }
 
 [node name="ch2" type="TextureButton" parent="."]
+visible = false
 margin_left = 222.3
 margin_top = 108.78
 margin_right = 236.3
@@ -38,6 +45,7 @@ __meta__ = {
 }
 
 [node name="ch3" type="TextureButton" parent="."]
+visible = false
 margin_left = 221.755
 margin_top = 147.026
 margin_right = 235.755
@@ -47,3 +55,17 @@ texture_disabled = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 263.164
+margin_top = 33.2799
+margin_right = 277.164
+margin_bottom = 46.2799
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

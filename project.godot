@@ -24,6 +24,14 @@ config/name="Hackathone"
 run/main_scene="res://objects/Menu.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=454
+window/size/height=255
+window/size/fullscreen=true
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

@@ -22,6 +22,7 @@ tracks/0/keys = {
 script = ExtResource( 2 )
 
 [node name="Death" type="Sprite" parent="."]
+scale = Vector2( 1.00288, 1.00288 )
 texture = ExtResource( 1 )
 centered = false
 
@@ -29,8 +30,8 @@ centered = false
 "anims/fade out" = SubResource( 1 )
 
 [node name="ColorRect" type="ColorRect" parent="fadein"]
-margin_right = 452.0
-margin_bottom = 256.0
+margin_right = 459.0
+margin_bottom = 260.0
 color = Color( 0, 0, 0, 0 )
 __meta__ = {
 "_edit_use_anchors_": false

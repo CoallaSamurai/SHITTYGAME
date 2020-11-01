@@ -9,7 +9,7 @@ func _ready():
 func _on_Game_bla_pressed():
 	$ColorRect2.visible=true
 	$ColorRect2/fade_out.play("fade_out_menu")
-	scene_to_change = "res://objects/Main.tscn"
+	scene_to_change = "res://Main.tscn"
 	
 func _on_Game_ne_pressed():
 	$ColorRect2.visible=true

@@ -38,3 +38,11 @@ func _on_right_pressed():
 func _on_left_pressed():
 	current_page-=1
 	Pages.set_texture(page_list[current_page])
+
+
+func _on_Book_table_pressed():
+	self.visible=true
+
+
+func _on_TextureButton_pressed():
+	self.visible = false

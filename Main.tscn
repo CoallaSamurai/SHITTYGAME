@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://textures/ui/ui_table_bg.png" type="Texture" id=1]
 [ext_resource path="res://textures/ui/ui_table.png" type="Texture" id=2]
@@ -10,6 +10,10 @@
 [ext_resource path="res://objects/Tears.tscn" type="PackedScene" id=8]
 [ext_resource path="res://objects/Cream.tscn" type="PackedScene" id=9]
 [ext_resource path="res://objects/Sage.tscn" type="PackedScene" id=10]
+[ext_resource path="res://objects/Book_Table.tscn" type="PackedScene" id=11]
+[ext_resource path="res://objects/Book.tscn" type="PackedScene" id=12]
+[ext_resource path="res://objects/Question_Table.tscn" type="PackedScene" id=13]
+[ext_resource path="res://objects/Question.tscn" type="PackedScene" id=14]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -20,62 +24,78 @@ __meta__ = {
 }
 
 [node name="Back" type="Sprite" parent="."]
-position = Vector2( 510.5, 300.25 )
-scale = Vector2( 2.26211, 2.35098 )
-z_index = -2
+position = Vector2( 215.848, 128.25 )
+scale = Vector2( 0.964085, 1.00196 )
+z_index = -3
 texture = ExtResource( 1 )
 
 [node name="Table" type="Sprite" parent="."]
-position = Vector2( 509.5, 299.75 )
-scale = Vector2( 2.24449, 2.35098 )
+position = Vector2( 228, 128 )
+scale = Vector2( 1.0044, 1.00392 )
 texture = ExtResource( 2 )
 
-[node name="Cream" parent="Table" instance=ExtResource( 9 )]
-margin_left = 83.0924
-margin_top = 15.4191
-margin_right = 123.092
-margin_bottom = 55.4191
-
-[node name="Sage" parent="Table" instance=ExtResource( 10 )]
-margin_left = 182.892
-margin_top = 22.2248
-margin_right = 222.892
-margin_bottom = 62.2248
-
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 512, 304 )
+anchor_mode = 0
 current = true
 
+[node name="Book" parent="." instance=ExtResource( 12 )]
+visible = false
+
+[node name="Sage" parent="." instance=ExtResource( 10 )]
+margin_left = 408.118
+margin_top = 99.0693
+margin_right = 426.118
+margin_bottom = 120.069
+
+[node name="Book_table" parent="." instance=ExtResource( 11 )]
+margin_left = 16.1103
+margin_top = 181.484
+margin_right = 98.1103
+margin_bottom = 247.484
+
 [node name="Mushroom" parent="." instance=ExtResource( 4 )]
-margin_left = 712.0
-margin_top = 112.0
-margin_right = 752.0
-margin_bottom = 152.0
-rect_scale = Vector2( 3, 3 )
+margin_left = 376.0
+margin_top = 56.0
+margin_right = 396.0
+margin_bottom = 81.0
 
 [node name="Flower" parent="." instance=ExtResource( 3 )]
-margin_left = 880.0
-margin_top = 128.0
-margin_right = 920.0
-margin_bottom = 168.0
-rect_scale = Vector2( 3, 3 )
+margin_left = 312.0
+margin_top = 56.0
+margin_right = 337.0
+margin_bottom = 69.0
 
 [node name="Gunpowder" parent="." instance=ExtResource( 6 )]
-margin_left = 680.0
-margin_top = 200.0
-margin_right = 720.0
-margin_bottom = 240.0
-rect_scale = Vector2( 3, 3 )
+margin_left = 304.0
+margin_top = 96.0
+margin_right = 326.0
+margin_bottom = 120.0
 
 [node name="Cauld_button" parent="." instance=ExtResource( 5 )]
-margin_left = 712.0
-margin_top = 376.0
-margin_right = 787.0
-margin_bottom = 445.0
-rect_scale = Vector2( 3, 3 )
+margin_left = 328.0
+margin_top = 176.0
+margin_right = 403.0
+margin_bottom = 245.0
 
 [node name="Tears" parent="." instance=ExtResource( 8 )]
-margin_left = 880.0
-margin_top = 240.0
-margin_right = 920.0
-margin_bottom = 280.0
+margin_left = 336.0
+margin_top = 104.0
+margin_right = 341.0
+margin_bottom = 120.0
+
+[node name="Cream" parent="." instance=ExtResource( 9 )]
+margin_left = 311.366
+margin_top = 143.059
+margin_right = 325.366
+margin_bottom = 174.059
+
+[node name="Quest_smol" parent="." instance=ExtResource( 13 )]
+margin_left = 216.0
+margin_top = 192.0
+margin_right = 256.0
+margin_bottom = 238.0
+
+[node name="Control" parent="." instance=ExtResource( 14 )]
+visible = false
+[connection signal="pressed" from="Book_table" to="Book" method="_on_Book_table_pressed"]
+[connection signal="button_down" from="Quest_smol" to="." method="_on_Quest_smol_button_down"]
