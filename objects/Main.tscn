@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://textures/ui/ui_table_bg.png" type="Texture" id=1]
 [ext_resource path="res://textures/ui/ui_table.png" type="Texture" id=2]
 [ext_resource path="res://scripts/Main.gd" type="Script" id=3]
-[ext_resource path="res://objects/Client.tscn" type="PackedScene" id=4]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -12,9 +11,6 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Client" parent="." instance=ExtResource( 4 )]
-position = Vector2( 320, 216 )
 
 [node name="Back" type="Sprite" parent="."]
 position = Vector2( 510.5, 300.25 )
@@ -152,14 +148,6 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Book"]
 position = Vector2( 696, 128 )
 
-[node name="Coprosnik" type="Button" parent="."]
-margin_left = 472.0
-margin_top = 448.0
-margin_right = 544.0
-margin_bottom = 496.0
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="Sprite" type="Sprite" parent="Coprosnik"]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512, 304 )
+current = true
