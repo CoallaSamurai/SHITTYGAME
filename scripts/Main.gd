@@ -34,21 +34,18 @@ func _process(delta):
 			print(recipe)
 			for cure in recipe:
 				for ill in $current_client.illness:
-					if cure in ill.anticures:
-						print("SMERT PO PRICHINE PIDORAS")
-					elif cure in ill.cures:
+					if cure in ill.cures:
 						points += 1
 
-			
-		if points > 0:
-			if points > 3:
-				points = 3
-			print("sas")
-			print(points)
-			print(recipe)
-#			$current_client.queue_free()
-#			is_client = false
-#			pot_ready = false
-		else:
-			print("SMERT PO PRICHINE PIDORAS")
+		else:	
+			if points > 0:
+				if points > 3:
+					points = 3
+				print("sas")
+				print(points)
+#				$current_client.queue_free()
+#				is_client = false
+#				pot_ready = false
+			else:
+				print("SMERT PO PRICHINE PIDORAS")
 	
