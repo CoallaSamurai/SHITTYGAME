@@ -10,5 +10,7 @@ func _ready():
 func _on_Mushroom_pressed():
 	if nam in par.recipe:
 		par.recipe.erase(nam)
+		toggle_mode = false
 	else:
 		par.recipe.append(nam)
+		toggle_mode = true

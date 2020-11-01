@@ -36,3 +36,4 @@ animation = "cauld_idle"
 frame = 1
 playing = true
 centered = false
+[connection signal="pressed" from="." to="." method="_on_Cauld_button_pressed"]

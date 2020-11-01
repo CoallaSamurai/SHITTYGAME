@@ -32,20 +32,22 @@ func _process(delta):
 	else:
 		if pot_ready == false:
 			print(recipe)
-			for cure in recipe:
-				for ill in $current_client.illness:
-					if cure in ill.cures:
-						points += 1
 
 		else:
-			if points > 0:
+			for cure in recipe:
+				for ill in $current_client.illness:
+					if cure in ill.anticures:
+						get_tree().change_scene("res://objects/Death.tscn")
+					elif cure in ill.cures:
+						points += 1
+			if points > 1:
 				if points > 3:
 					points = 3
 				print("sas")
 				print(points)
-#				$current_client.queue_free()
-#				is_client = false
-#				pot_ready = false
+				$current_client.queue_free()
+				is_client = false
+				pot_ready = false
 			else:
-				print("SMERT PO PRICHINE PIDORAS")
+				get_tree().change_scene("res://objects/Death.tscn")
 	
