@@ -2,7 +2,7 @@ extends Control
 const CLIENT = preload("res://objects/Client.tscn")
 
 
-var recipe = []
+export var recipe = []
 var points
 var is_client = false
 var current_client
@@ -47,9 +47,10 @@ func _process(delta):
 				points = 3
 			print("sas")
 			print(points)
-			$current_client.queue_free()
-			is_client = false
-			pot_ready = false
+			print(recipe)
+#			$current_client.queue_free()
+#			is_client = false
+#			pot_ready = false
 		else:
 			print("SMERT PO PRICHINE PIDORAS")
 	
