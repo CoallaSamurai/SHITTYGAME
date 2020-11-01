@@ -28,19 +28,17 @@ func _process(delta):
 		add_child(current_client)
 		$current_client.position += Vector2(300, 200)
 		is_client = true
-		recipe = [$current_client.illness[0].cures[0], 
-		$current_client.illness[1].cures[0], 
-		$current_client.illness[2].cures[0]]
 		print(recipe)
 	else:
 		if pot_ready == false:
+			print(recipe)
 			for cure in recipe:
 				for ill in $current_client.illness:
 					if cure in ill.anticures:
 						print("SMERT PO PRICHINE PIDORAS")
 					elif cure in ill.cures:
 						points += 1
-			pot_ready = true
+
 			
 		if points > 0:
 			if points > 3:

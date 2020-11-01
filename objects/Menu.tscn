@@ -93,7 +93,7 @@ text = " Quit"
 align = 0
 
 [node name="Particles2D" type="Particles2D" parent="."]
-position = Vector2( 97.5447, 266.843 )
+position = Vector2( 116.03, 150.65 )
 scale = Vector2( 1, 0.993374 )
 amount = 18
 lifetime = 8.0
@@ -102,7 +102,8 @@ process_material = SubResource( 1 )
 texture = ExtResource( 4 )
 
 [node name="Particles2D2" type="Particles2D" parent="."]
-position = Vector2( 137.156, 264.643 )
+visible = false
+position = Vector2( 116.03, 150.65 )
 amount = 22
 lifetime = 8.0
 randomness = 0.11
@@ -120,7 +121,6 @@ color = Color( 0, 0, 0, 1 )
 anims/fade_out_menu = SubResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 margin_left = 1.0
 margin_right = 258.0
 margin_bottom = 146.0

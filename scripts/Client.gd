@@ -45,6 +45,7 @@ func _ready():
 	$Suga.play(race)
 	$Wart.play(race)
 	$Zomb.play(race)
+	$Pump.play(race)
 	give_smpt()
 	print(illness[0].name)
 	print(illness[1].name)
@@ -58,6 +59,8 @@ func _ready():
 			$Wart.visible = true
 		if ill.name == "zomb":
 			$Zomb.visible = true
+		if ill.name == "pump":
+			$Pump.visible = true
 
 
 
