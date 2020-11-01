@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://textures/ui/cauldron/ui_cauld_1.png" type="Texture" id=1]
+[ext_resource path="res://textures/ui/cauldron/ui_cauld_pot_1.png" type="Texture" id=2]
+[ext_resource path="res://textures/ui/cauldron/ui_cauld_pot_2.png" type="Texture" id=3]
+[ext_resource path="res://textures/ui/cauldron/ui_cauld_1_p.png" type="Texture" id=4]
+[ext_resource path="res://textures/ui/cauldron/ui_cauld_1_h.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "cauld_idle",
+"speed": 1.0
+} ]
+
+[node name="Cauld_button" type="TextureButton"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 1 )
+texture_focused = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="giga" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 0, 0.174828 )
+frames = SubResource( 1 )
+animation = "cauld_idle"
+playing = true
+centered = false

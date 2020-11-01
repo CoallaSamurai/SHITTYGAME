@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://textures/ui/items/item_flo.png" type="Texture" id=1]
+[ext_resource path="res://textures/ui/items/item_flo_h.png" type="Texture" id=2]
+[ext_resource path="res://textures/ui/items/item_flo_p.png" type="Texture" id=3]
+
+[node name="Flower" type="TextureButton"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+texture_disabled = ExtResource( 1 )
+texture_focused = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
