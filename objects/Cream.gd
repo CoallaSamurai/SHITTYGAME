@@ -1,13 +1,13 @@
 extends TextureButton
 var par
-var nam = "amanita mix"
+var nam = "beauty gel"
 
 
 func _ready():
 	par = get_parent()
 
 
-func _on_Mushroom_pressed():
+func _on_Cream_pressed():
 	if nam in par.recipe:
 		par.recipe.erase(nam)
 		toggle_mode = false

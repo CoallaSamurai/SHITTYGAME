@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://textures/ui/ui_table_bg.png" type="Texture" id=1]
 [ext_resource path="res://textures/ui/ui_table.png" type="Texture" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://objects/Cauldron.tscn" type="PackedScene" id=5]
 [ext_resource path="res://objects/Gunp.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts/Main.gd" type="Script" id=7]
+[ext_resource path="res://objects/Tears.tscn" type="PackedScene" id=8]
+[ext_resource path="res://objects/Cream.tscn" type="PackedScene" id=9]
+[ext_resource path="res://objects/Sage.tscn" type="PackedScene" id=10]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -26,6 +29,18 @@ texture = ExtResource( 1 )
 position = Vector2( 509.5, 299.75 )
 scale = Vector2( 2.24449, 2.35098 )
 texture = ExtResource( 2 )
+
+[node name="Cream" parent="Table" instance=ExtResource( 9 )]
+margin_left = 83.0924
+margin_top = 15.4191
+margin_right = 123.092
+margin_bottom = 55.4191
+
+[node name="Sage" parent="Table" instance=ExtResource( 10 )]
+margin_left = 182.892
+margin_top = 22.2248
+margin_right = 222.892
+margin_bottom = 62.2248
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 512, 304 )
@@ -58,3 +73,9 @@ margin_top = 376.0
 margin_right = 787.0
 margin_bottom = 445.0
 rect_scale = Vector2( 3, 3 )
+
+[node name="Tears" parent="." instance=ExtResource( 8 )]
+margin_left = 880.0
+margin_top = 240.0
+margin_right = 920.0
+margin_bottom = 280.0
