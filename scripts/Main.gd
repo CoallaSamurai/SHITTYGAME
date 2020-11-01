@@ -41,11 +41,15 @@ func _process(delta):
 					elif cure in ill.cures:
 						points += 1
 			pot_ready = true
+			
 		if points > 0:
 			if points > 3:
 				points = 3
 			print("sas")
 			print(points)
+			$current_client.queue_free()
+			is_client = false
+			pot_ready = false
 		else:
-			print("kaka")
+			print("SMERT PO PRICHINE PIDORAS")
 	
