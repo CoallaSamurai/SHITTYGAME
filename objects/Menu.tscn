@@ -69,9 +69,9 @@ centered = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 22.0
-margin_top = 61.0
+margin_top = 68.0
 margin_right = 109.0
-margin_bottom = 129.0
+margin_bottom = 100.0
 rect_scale = Vector2( 1.08251, 1.23978 )
 theme = ExtResource( 5 )
 __meta__ = {
@@ -79,23 +79,16 @@ __meta__ = {
 }
 
 [node name="Game bla" type="Button" parent="VBoxContainer"]
-margin_right = 90.0
+margin_right = 87.0
 margin_bottom = 14.0
 theme = ExtResource( 5 )
 text = " Start Game"
 align = 0
 
-[node name="Game ne" type="Button" parent="VBoxContainer"]
-margin_top = 18.0
-margin_right = 90.0
-margin_bottom = 32.0
-text = " How to play"
-align = 0
-
 [node name="Quit" type="Button" parent="VBoxContainer"]
-margin_top = 36.0
-margin_right = 90.0
-margin_bottom = 50.0
+margin_top = 18.0
+margin_right = 87.0
+margin_bottom = 32.0
 text = " Quit"
 align = 0
 
@@ -140,7 +133,6 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
 anims/fade_in = SubResource( 3 )
 [connection signal="pressed" from="VBoxContainer/Game bla" to="." method="_on_Game_bla_pressed"]
-[connection signal="pressed" from="VBoxContainer/Game ne" to="." method="_on_Game_ne_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
 [connection signal="animation_finished" from="ColorRect2/fade_out" to="." method="_on_fade_out_animation_finished"]
 [connection signal="animation_finished" from="ColorRect/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
