@@ -23,22 +23,6 @@ _global_script_class_icons={
 config/name="Hackathone"
 config/icon="res://icon.png"
 
-<<<<<<< HEAD
-[autoload]
-
-Client="*res://objects/Client.tscn"
-
-[display]
-
-window/size/width=454
-window/size/height=255
-window/size/resizable=false
-window/size/fullscreen=true
-window/stretch/mode="2d"
-window/stretch/aspect="keep"
-
-=======
->>>>>>> dc2f7ca3e98d121a98a39576600853beef11c096
 [rendering]
 
 environment/default_environment="res://default_env.tres"
